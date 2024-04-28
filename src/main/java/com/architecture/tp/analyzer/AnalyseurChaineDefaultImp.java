@@ -9,7 +9,7 @@ public class AnalyseurChaineDefaultImp implements AnalyzeurChaine{
 	@Override
 	public String AnalyserChaine(String chaine) {
 		String mirroir = new StringBuilder(chaine).reverse().toString();
-		return mirroir;
+		return mirroir.equals(chaine)?"bien dit "+mirroir:mirroir;
 	}
 
 }

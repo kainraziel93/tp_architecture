@@ -21,7 +21,7 @@ public class Main {
 		this.analyzeurChaine = analyzeurChaine;
 	}
 	public void AnalyzerChaine() {
-		System.out.println(this.analyzeurChaine.AnalyserChaine("adam"));
+		System.out.println(this.analyzeurChaine.AnalyserChaine("ada"));
 	}
 
 	public AnalyzeurChaine getAnalyzeurChaine() {
