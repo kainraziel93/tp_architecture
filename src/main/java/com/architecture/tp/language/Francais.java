@@ -4,20 +4,17 @@ public class Francais implements Language{
 
 	@Override
 	public String saluer() {
-		// TODO Auto-generated method stub
-		return null;
+		return "Bonjour";
 	}
 
 	@Override
 	public String feliciter() {
-		// TODO Auto-generated method stub
-		return null;
+		return "Bien dit";
 	}
 
 	@Override
 	public String acquitter() {
-		// TODO Auto-generated method stub
-		return null;
+		return "au revoir";
 	}
 
 }
