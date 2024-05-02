@@ -10,6 +10,9 @@ import org.springframework.stereotype.Component;
 
 import com.architecture.tp.analyzer.AnalyseurChaineDefaultImp;
 import com.architecture.tp.analyzer.AnalyzeurChaine;
+import com.architecture.tp.language.Anglais;
+import com.architecture.tp.language.Francais;
+import com.architecture.tp.language.Language;
 
 @Component
 public class Main {
@@ -33,7 +36,12 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
-		new Main(new AnalyseurChaineDefaultImp()).AnalyzerChaine();
+		Language anglais = new Anglais();
+		Language francais = new Francais();
+		Main programmeFrancais =  new Main(new AnalyseurChaineDefaultImp(anglais));
+		Main progammeAnglais = new Main(new AnalyseurChaineDefaultImp(francais));
+		progammeAnglais.AnalyzerChaine();
+		programmeFrancais.AnalyzerChaine();
 		
 	}
 
