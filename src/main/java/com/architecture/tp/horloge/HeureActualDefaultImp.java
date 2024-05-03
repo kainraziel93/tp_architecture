@@ -10,7 +10,7 @@ public class HeureActualDefaultImp implements HeureActuel {
 	@Override
 	public int heure() {
 		
-		return LocalTime.now().getHour();
+		return LocalTime.of(3,0).getHour();
 	}
 
 	

@@ -9,9 +9,13 @@ public class Francais implements Language{
 	public Francais(HeureActuel heureActuel) {
 		this.heureActuel = heureActuel;
 	}
+	
 	@Override
 	public String saluer() {
-		return "Bonjour";
+		if(heureActuel.heure() >= 18 ||heureActuel.heure() <=3 ) {
+			return "Bonjour";
+		}
+		return "Bonsoir";
 	}
 
 	@Override
@@ -21,7 +25,18 @@ public class Francais implements Language{
 
 	@Override
 	public String acquitter() {
-		return "au revoir";
+		String message = "Bonne";
+		if(heureActuel.heure() >= 5 && heureActuel.heure() <=12 ) {
+			System.out.println(heureActuel.heure());
+			return message+" journée";
+		}
+		if(heureActuel.heure() >12 &&  heureActuel.heure()<=18) {
+			return message+" après-midi";
+		}
+		if(heureActuel.heure() >18 && heureActuel.heure()<22 ) {
+			return message+" soirée";
+		}
+		return message+" nuit";
 	}
 
 }
