@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 import com.architecture.tp.analyzer.AnalyseurChaineDefaultImp;
 import com.architecture.tp.analyzer.AnalyzeurChaine;
 import com.architecture.tp.horloge.HeureActualDefaultImp;
+import com.architecture.tp.horloge.HeureActuel;
 import com.architecture.tp.language.Anglais;
 import com.architecture.tp.language.Francais;
 import com.architecture.tp.language.Language;
@@ -24,8 +25,8 @@ public class Main {
 	public Main(AnalyzeurChaine  analyzeurChaine) {
 		this.analyzeurChaine = analyzeurChaine;
 	}
-	public void AnalyzerChaine() {
-		System.out.println(this.analyzeurChaine.AnalyserChaine("ada"));
+	public void AnalyzerChaine(String chaine) {
+		System.out.println(this.analyzeurChaine.AnalyserChaine(chaine));
 	}
 
 	public AnalyzeurChaine getAnalyzeurChaine() {
@@ -36,13 +37,28 @@ public class Main {
 		this.analyzeurChaine = analyzeurChaine;
 	}
 	
+	
 	public static void main(String[] args) {
-		Language anglais = new Anglais(new HeureActualDefaultImp());
-		Language francais = new Francais(new HeureActualDefaultImp());
-		Main programmeFrancais =  new Main(new AnalyseurChaineDefaultImp(francais));
-		Main progammeAnglais = new Main(new AnalyseurChaineDefaultImp(anglais));
-		progammeAnglais.AnalyzerChaine();
-		programmeFrancais.AnalyzerChaine();
+		Scanner languageScanner = new Scanner(System.in);
+		Scanner chaineScanner = new Scanner(System.in);
+		String langage;
+		String chaine;
+		HeureActuel heureActuel = new HeureActualDefaultImp();
+		AnalyzeurChaine analyzeurChaine;
+		Language choixLangage;
+		Main program;
+		do {
+			System.out.println("selectioner une language\n1-Francais\n2-Anglais");
+			langage =languageScanner.next();
+			
+		}while(langage.equals("1")==false && langage.equals("2")==false);
+		if(langage.equals("1")) choixLangage = new Francais(heureActuel);
+		else choixLangage = new Anglais(heureActuel);
+		analyzeurChaine = new AnalyseurChaineDefaultImp(choixLangage);
+		program = new Main(analyzeurChaine);
+		System.out.println("veuiller saisir une chaine ");
+		chaine = chaineScanner.next();
+		program.AnalyzerChaine(chaine);
 		
 	}
 
