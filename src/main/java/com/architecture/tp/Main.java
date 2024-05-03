@@ -37,11 +37,11 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
-		//Language anglais = new Anglais();
+		Language anglais = new Anglais(new HeureActualDefaultImp());
 		Language francais = new Francais(new HeureActualDefaultImp());
 		Main programmeFrancais =  new Main(new AnalyseurChaineDefaultImp(francais));
-		//Main progammeAnglais = new Main(new AnalyseurChaineDefaultImp(anglais));
-		//progammeAnglais.AnalyzerChaine();
+		Main progammeAnglais = new Main(new AnalyseurChaineDefaultImp(anglais));
+		progammeAnglais.AnalyzerChaine();
 		programmeFrancais.AnalyzerChaine();
 		
 	}
