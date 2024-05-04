@@ -1,7 +1,12 @@
 package com.architecture.tp.language;
 
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Service;
+
 import com.architecture.tp.horloge.HeureActuel;
 
+ @Service
+ @Primary
 public class Francais implements Language{
 	
 	private HeureActuel heureActuel;

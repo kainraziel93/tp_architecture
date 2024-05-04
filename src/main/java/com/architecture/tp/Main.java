@@ -48,7 +48,7 @@ public class Main {
 		Language choixLangage;
 		Main program;
 		do {
-			System.out.println("selectioner une language\n1-Francais\n2-Anglais");
+			System.out.println("selectioner une langage/choose a language\n1-Francais\n2-english");
 			langage =languageScanner.next();
 			
 		}while(langage.equals("1")==false && langage.equals("2")==false);
@@ -56,7 +56,7 @@ public class Main {
 		else choixLangage = new Anglais(heureActuel);
 		analyzeurChaine = new AnalyseurChaineDefaultImp(choixLangage);
 		program = new Main(analyzeurChaine);
-		System.out.println("veuiller saisir une chaine ");
+		System.out.println(langage.equals("1")?"veuiller saisir une chaine ":"type a string2");
 		chaine = chaineScanner.next();
 		program.AnalyzerChaine(chaine);
 		

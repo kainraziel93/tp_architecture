@@ -1,7 +1,10 @@
 package com.architecture.tp.language;
 
+import org.springframework.stereotype.Service;
+
 import com.architecture.tp.horloge.HeureActuel;
 
+@Service
 public class Anglais implements Language{
 
 	private HeureActuel heureActuel;
