@@ -1,0 +1,41 @@
+{
+	"info": {
+		"_postman_id": "5f0fa07e-24ae-45b5-a46e-c492499aa5c9",
+		"name": "tp-architecrure",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33994339"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/analyzeur?chaine=ada",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "en",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/analyzeur?chaine=ada",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"analyzeur"
+					],
+					"query": [
+						{
+							"key": "chaine",
+							"value": "ada"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
