@@ -1,4 +1,4 @@
-package com.architecture.tp.horloge;
+package com.architecture.horloge;
 
 import java.time.LocalTime;
 

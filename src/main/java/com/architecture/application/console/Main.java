@@ -12,9 +12,9 @@ import com.architecture.domaine.AnalyseurDeChaineSimple;
 import com.architecture.domaine.AnalyzeurDeChaine;
 import com.architecture.domaine.FournisseurHeure;
 import com.architecture.domaine.Langage;
-import com.architecture.tp.horloge.FournisseurHeureSysteme;
-import com.architecture.tp.langues.Anglais;
-import com.architecture.tp.langues.Francais;
+import com.architecture.horloge.FournisseurHeureSysteme;
+import com.architecture.langues.Anglais;
+import com.architecture.langues.Francais;
 
 @Component
 public class Main {

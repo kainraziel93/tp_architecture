@@ -13,7 +13,7 @@ import com.architecture.domaine.AnalyseurDeChaineSimple;
 import com.architecture.domaine.AnalyzeurDeChaine;
 import com.architecture.domaine.FournisseurHeure;
 import com.architecture.domaine.Langage;
-import com.architecture.tp.langues.LangageFactory;
+import com.architecture.langues.LangageFactory;
 
 @RestController
 @RequestMapping("analyseur")

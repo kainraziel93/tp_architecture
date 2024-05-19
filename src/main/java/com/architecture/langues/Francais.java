@@ -1,4 +1,4 @@
-package com.architecture.tp.langues;
+package com.architecture.langues;
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
