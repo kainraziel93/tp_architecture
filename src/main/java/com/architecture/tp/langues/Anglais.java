@@ -1,19 +1,19 @@
-package com.architecture.tp.language;
+package com.architecture.tp.langues;
 
 import org.springframework.stereotype.Service;
 
-import com.architecture.tp.horloge.HeureActuel;
+import com.architecture.domaine.FournisseurHeure;
+import com.architecture.domaine.Langage;
 
 @Service
-public class Anglais implements Language{
+public class Anglais implements Langage{
 
-	private HeureActuel heureActuel;
 	
-	public Anglais(HeureActuel heureActuel) {
-		this.heureActuel = heureActuel;
+	public Anglais() {
+
 	}
 	@Override
-	public String saluer() {
+	public String saluer(FournisseurHeure heureActuel) {
 		String message = "Good";
 		if(heureActuel.heure() >= 5 && heureActuel.heure() <=12 ) {
 			System.out.println(heureActuel.heure());
@@ -31,12 +31,12 @@ public class Anglais implements Language{
 	
 
 	@Override
-	public String feliciter() {
+	public String feliciter(FournisseurHeure heureActuel) {
 		return "well done";
 	}
 
 	@Override
-	public String acquitter() {
+	public String acquitter(FournisseurHeure heureActuel) {
 		return "goodbye";
 	}
 

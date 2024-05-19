@@ -1,22 +1,22 @@
-package com.architecture.tp.language;
+package com.architecture.tp.langues;
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
-import com.architecture.tp.horloge.HeureActuel;
+import com.architecture.domaine.FournisseurHeure;
+import com.architecture.domaine.Langage;
 
  @Service
  @Primary
-public class Francais implements Language{
+public class Francais implements Langage{
 	
-	private HeureActuel heureActuel;
 	
-	public Francais(HeureActuel heureActuel) {
-		this.heureActuel = heureActuel;
+	public Francais() {
+		
 	}
 	
 	@Override
-	public String saluer() {
+	public String saluer(FournisseurHeure heureActuel) {
 		if(heureActuel.heure() >= 18 ||heureActuel.heure() <=3 ) {
 			return "Bonjour";
 		}
@@ -24,12 +24,12 @@ public class Francais implements Language{
 	}
 
 	@Override
-	public String feliciter() {
+	public String feliciter(FournisseurHeure heureActuel) {
 		return "Bien dit";
 	}
 
 	@Override
-	public String acquitter() {
+	public String acquitter(FournisseurHeure heureActuel) {
 		String message = "Bonne";
 		if(heureActuel.heure() >= 5 && heureActuel.heure() <=12 ) {
 			System.out.println(heureActuel.heure());

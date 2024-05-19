@@ -1,10 +1,10 @@
 # Guide d'utilisation de l'application Maven/Spring Boot
 
 ## 1. Démarrage de l'application en mode console :
-Pour démarrer l'application en mode console, exécutez la classe Main.java.
+Pour démarrer l'application en mode console, exécutez la class Main.java.
 
 ## 2. Démarrage de l'application en mode web :
-Pour démarrer l'application en mode web, exécutez la classe TpArchitectureApplication.java.
+Pour démarrer l'application en mode web, exécutez la class TpArchitectureApplication.java.
 
 ### I) Partie web :
 - Architecture de l'application :

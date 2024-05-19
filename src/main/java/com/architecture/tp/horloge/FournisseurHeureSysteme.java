@@ -4,8 +4,10 @@ import java.time.LocalTime;
 
 import org.springframework.stereotype.Service;
 
+import com.architecture.domaine.FournisseurHeure;
+
 @Service
-public class HeureActualDefaultImp implements HeureActuel {
+public class FournisseurHeureSysteme implements FournisseurHeure {
 
 	@Override
 	public int heure() {

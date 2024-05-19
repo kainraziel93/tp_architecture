@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "http://localhost:8080/analyzeur?chaine=ada",
+			"name": "http://localhost:8080/analyseur?chaine=ada",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -18,14 +18,14 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8080/analyzeur?chaine=ada",
+					"raw": "http://localhost:8080/analyseur?chaine=ada",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"analyzeur"
+						"analyseur"
 					],
 					"query": [
 						{
